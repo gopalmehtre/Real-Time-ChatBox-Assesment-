@@ -18,8 +18,10 @@ const Signup = async (req, res, next) => {
         const user = await UserModel.create({email, password, username, createdAt});
         const token = createSecretToken(user._id);
         res.cookie("token", token, {
-            withCredentials: true,
-            httpOnly : false,
+            httpOnly: false,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+            maxAge: 7 * 24 * 60 * 60 * 1000
         });
         res.status(201).json({
             message: "User signed in successfully", 
@@ -53,8 +55,10 @@ const Login = async (req, res, next) => {
 
         const token = createSecretToken(user._id);
         res.cookie("token", token, {
-            withCredentials: true,
             httpOnly: false,
+            secure: process.env.NODE_ENV === 'production',
+            sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'lax',
+            maxAge: 7 * 24 * 60 * 60 * 1000
         });
 
         res.status(201).json({
