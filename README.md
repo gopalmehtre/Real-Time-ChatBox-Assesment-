@@ -2,10 +2,8 @@
 
 A full-stack real-time chat application built with React, Node.js, Express, Socket.IO, and MongoDB. Users can create channels, send messages in real-time, and see online/offline status of other users.
 
-![Chat App](https://img.shields.io/badge/Status-Complete-success)
-![Node.js](https://img.shields.io/badge/Node.js-v18+-green)
-![React](https://img.shields.io/badge/React-v18+-blue)
-![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)
+Project Link (Frontend) : https://real-time-chat-box-assesment.vercel.app
+Backend Link : https://chatbox-backend-3p39.onrender.com
 
 ---
 
