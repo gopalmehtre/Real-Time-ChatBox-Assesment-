@@ -520,4 +520,3 @@ This project is an assessment assignment. All rights reserved.
 
 ---
 
-**Made with ❤️ for Full-Stack Internship Assessment**
